@@ -9,12 +9,7 @@ pool:
 variables: 
  buildConfiguration: 'Release'
 
-steps:
-#  - task: 'UseDotNet@2'
-#    inputs:
-#      packageType: 'sdk'
-#      version: '7.0.102'
-  
+steps:  
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
     inputs:
