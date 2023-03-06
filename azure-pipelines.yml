@@ -1,7 +1,7 @@
 # C# console application
 
-trigger: 
- - Master
+trigger:
+ - Master 
 
 pool:
   name: Default
@@ -23,10 +23,13 @@ steps:
       arguments: '--configuration $(buildConfiguration)'
   
   - task: 'DotNetCoreCLI@2'
-    displayName: publish artifact
+    displayName: dotnet publish --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
     inputs:
       command: publish
       publishWebProjects: false
       projects: '**/*.csproj'
       arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
       zipAfterPublish: true
+
+  - task: 'PublishBuildArtifacts@1'
+    displayName: publish artifact
