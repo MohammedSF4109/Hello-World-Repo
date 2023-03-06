@@ -10,10 +10,10 @@ variables:
  buildConfiguration: 'Release'
 
 steps:
-  - task: 'UseDotNet@2'
-    inputs:
-      packageType: 'sdk'
-      version: '7.0.102'
+#  - task: 'UseDotNet@2'
+#    inputs:
+#      packageType: 'sdk'
+#      version: '7.0.102'
   
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
@@ -28,5 +28,5 @@ steps:
       command: publish
       publishWebProjects: false
       projects: '**/*.csproj'
-      arguments: '--configuration $(buildConfiguration) --outpur $(Build.ArtifactStagingDirectory)'
+      arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
       zipAfterPublish: true
