@@ -5,6 +5,7 @@ trigger:
 
 pool:
   name: Default
+  
 variables: 
  buildConfiguration: 'Release'
 
