@@ -2,6 +2,9 @@
 
 trigger: 
  - Master
+
+pool:
+  name: Default
 variables: 
  buildConfiguration: 'Release'
 
