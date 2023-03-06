@@ -1,0 +1,28 @@
+# C# console application
+
+trigger: 
+ - Master
+variables: 
+ buildConfiguration: 'Release'
+
+steps:
+  #- task: 'UseDotNet@2'
+    # inputs:
+     # packageType: 'sdk'
+     # version: '7.0.102'
+  
+  - task: 'DotNetCoreCLI@2'
+    displayName: build $(buildConfiguration)
+    inputs:
+      command: build
+      projects: '**/*.csproj'
+      arguments: '--configuration $(buildConfiguration)'
+  
+  - task: 'DotNetCoreCLI@2'
+    displayName: publish artifact
+    inputs:
+      command: publish
+      publishWebProjects: false
+      projects: '**/*.csproj'
+      arguments: '--configuration $(buildConfiguration) --outpur $(Build.ArtifactStagingDirectory)'
+      zipAfterPublish: true
