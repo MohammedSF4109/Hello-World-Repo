@@ -10,6 +10,15 @@ variables:
  buildConfiguration: 'Release'
 
 steps:  
+  - task: PowerShell@2
+    displayName: parsing XML document
+    inputs:
+      targetType: inline
+      script: |
+        $XMLfile = "$(Build.SourcesDirectory)\WPF_Utilities.xml"
+        $XMLData = [xml](Get-Content $XMLfile)
+        $XMLData.Build.Utilities.Utility
+        
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
     inputs:
