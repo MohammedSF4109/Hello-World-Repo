@@ -15,10 +15,10 @@ steps:
     inputs:
       targetType: inline
       script: |
-        $XMLfile = "$(Build.SourcesDirectory)\WPF_Utilities.xml"
+        $XMLfile = "$(Build.SourcesDirectory)\*.xml"
         $XMLData = [xml](Get-Content $XMLfile)
         $XMLData.Build.Utilities.Utility
-        
+
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
     inputs:
