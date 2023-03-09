@@ -39,6 +39,15 @@ steps:
         Write-Host "GitSolutionfile: " $GitSolutionfile
         Write-Host "Git Output: " $GitOutput
         Write-Host "Git Folder: " $GitFolder
+  
+  - task: PowerShell@2
+    displayName: Replace an attribute of XML
+    inputs:
+      targetType: inline
+      script: |
+        $XMLFilePath = $(Build.SourcesDirectory)\ReplaceAssignment.xml
+        $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath).Replace(_[0-9]{4}, _2023)
+        [System.IO.File]::WriteAllText($XMLFilePath)
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
