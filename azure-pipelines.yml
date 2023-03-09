@@ -17,11 +17,22 @@ steps:
       script: |
         $XMLfile = "$(Build.SourcesDirectory)\*.xml"
         $XMLNodes = [xml](Get-Content $XMLfile)
-        $number = 0
         foreach( $Utility in $XMLNodes.Build.Utilities.Utility )
         {
-          if ( $Utility.SourceType -eq 'SVN' ) { Write-Host 'Condition true'}
+          if ( $Utility.SourceType -eq 'SVN' ) 
+          { 
+            $SVNSolutionfile = $Utility.Solutionfile 
+            $SVNOutput = $Utility.Output
+            $SVNFolder = $Utility.Folders.Folder
+          }
+          else
+          {
+            $GitSolutionfile = $Utility.Solutionfile
+            $GitOutput = $Utility.Output
+            $GitFolder = $Utility.Folders.Folder
+          }
         }
+        Write-Host $SVNSolutionfile
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
