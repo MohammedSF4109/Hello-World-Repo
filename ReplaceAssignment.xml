@@ -2,7 +2,7 @@
   <Utilities>
 	
     <Utility Framework="4.0" Name="IO Utilities" SourceType="SVN">
-      <Solutionfile>%PATH%\Build\Utilities\Formula Validator\Formula_Validator_2010.sln</Solutionfile>
+      <Solutionfile>%PATH%\Build\Utilities\Formula Validator\Formula_Validator_2023.sln</Solutionfile>
       <Output>%PATH%\Build\Utilities\Formula Validator\bin\Release</Output>
       <ReferencePath></ReferencePath>
 	  <Folders>
@@ -11,7 +11,7 @@
     </Utility>
 	
     <Utility Framework="4.0" Name="IO Utilities" SourceType="SVN">
-      <Solutionfile>%PATH%\Windows\DocIO.Windows\Document Explorer\Document Explorer_2010.sln</Solutionfile>
+      <Solutionfile>%PATH%\Windows\DocIO.Windows\Document Explorer\Document Explorer_2023.sln</Solutionfile>
       <Output>%PATH%\CustomUtilities\Document Explorer\bin\Release</Output>
       <ReferencePath></ReferencePath>
 	  <Folders>
@@ -20,7 +20,7 @@
     </Utility>
 	
 	  <Utility Framework="4.0" Name="IO Utilities" SourceType="SVN">
-      <Solutionfile>%PATH%\Base\HTMLConverter.Base\Extensions\LegacyDrawing\LegacyDrawing_2010.sln</Solutionfile>
+      <Solutionfile>%PATH%\Base\HTMLConverter.Base\Extensions\LegacyDrawing\LegacyDrawing_2023.sln</Solutionfile>
       <Output>%PATH%\CustomUtilities\LegacyDrawing\bin\Release</Output>
       <ReferencePath></ReferencePath>
 	  <Folders>
@@ -29,8 +29,8 @@
     </Utility>
 	
 	<Utility Framework="4.0" Name="IO Utilities" SourceType="SVN">
-      <Solutionfile>%PATH%\Base\XlsIO.Base\XlsIO File Explorer\XlsIOFileExplorer_2010.sln</Solutionfile>
-      <Output>%PATH%\Base\XlsIO.Base\XlsIO File Explorer\bin_2010\Release</Output>
+      <Solutionfile>%PATH%\Base\XlsIO.Base\XlsIO File Explorer\XlsIOFileExplorer_2023.sln</Solutionfile>
+      <Output>%PATH%\Base\XlsIO.Base\XlsIO File Explorer\bin_2023\Release</Output>
       <ReferencePath></ReferencePath>
 	  <Folders>
 	  <Folder>%PATH%\Base\XlsIO.Base\XlsIO File Explorer</Folder>
@@ -38,8 +38,8 @@
     </Utility>
 	
 	<Utility Framework="4.0" Name="Sample Browsers" SourceType="SVN">
-      <Solutionfile>%PATH%\Build\Utilities\WPFSampleBrowser\WPFSamplebrowser_2010.sln</Solutionfile>
-      <Output>%PATH%\Build\Utilities\WPFSampleBrowser\bin_2010\Release</Output>
+      <Solutionfile>%PATH%\Build\Utilities\WPFSampleBrowser\WPFSamplebrowser_2023.sln</Solutionfile>
+      <Output>%PATH%\Build\Utilities\WPFSampleBrowser\bin_2023\Release</Output>
       <ReferencePath>%PATH%\Assemblies\4.0</ReferencePath>
 	  <Folders>
 	  <Folder>%PATH%\Build\Utilities\WPFSampleBrowser</Folder>
@@ -47,8 +47,8 @@
     </Utility>
 	
     <Utility Framework="4.0" Name="Olap Utils" SourceType="SVN">
-      <Solutionfile>%PATH%\WPF\ReportBuilder.WPF\Src\Syncfusion.ReportBuilder.WPF_2010.sln</Solutionfile>
-      <Output>%PATH%\WPF\ReportBuilder.WPF\Src\bin_2010\Release</Output>
+      <Solutionfile>%PATH%\WPF\ReportBuilder.WPF\Src\Syncfusion.ReportBuilder.WPF_2023.sln</Solutionfile>
+      <Output>%PATH%\WPF\ReportBuilder.WPF\Src\bin_2023\Release</Output>
       <ReferencePath>%PATH%\Assemblies\4.0\en-US</ReferencePath>
 	  <Folders>
 	  <Folder>%PATH%\WPF\ReportBuilder.WPF\Src</Folder>
@@ -184,7 +184,7 @@
     </Utility>
 	
 	<Utility Framework="4.0" Name="Toolbox Installers" SourceType="GitHub">
-      <Solutionfile>%GitHubPath%\build-utilities\ToolboxInstallers\VS2005ToolboxInstaller\ToolBoxInstaller_2005.sln</Solutionfile>
+      <Solutionfile>%GitHubPath%\build-utilities\ToolboxInstallers\VS2005ToolboxInstaller\ToolBoxInstaller_2023.sln</Solutionfile>
       <Output>%GitHubPath%\CustomUtilities\ToolboxInstallers\VS2005ToolboxInstaller\bin\Release</Output>
       <ReferencePath></ReferencePath>
 	  <Folders>
