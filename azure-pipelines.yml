@@ -18,9 +18,9 @@ steps:
         $XMLfile = "$(Build.SourcesDirectory)\*.xml"
         $XMLNodes = [xml](Get-Content $XMLfile)
         $number = 0
-        foreach( $Utility in $XMLNodes.Build.Utilities )
+        foreach( $Utility in $XMLNodes.Build.Utilities.Utility )
         {
-          $Utility
+          if ( $Utility.SourceType -eq 'SVN' ) { Write-Host 'Condition true'}
         }
 
   - task: 'DotNetCoreCLI@2'
