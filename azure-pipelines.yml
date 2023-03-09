@@ -18,9 +18,9 @@ steps:
         $XMLfile = "$(Build.SourcesDirectory)\*.xml"
         $XMLNodes = [xml](Get-Content $XMLfile)
         $number = 0
-        foreach($XMLNode in $XMLNodes.Build.Utilities)
+        foreach($Utility in $XMLNodes.Build.Utilities)
         {
-          $SourceType = $XMLData.Build.Utilities.Utility.SourceType
+          $SourceType = $Utility.Build.Utilities.Utility.SourceType
           if($SourceType -eq 'SVN') {Write-Host "Condition true"}
         }
 
