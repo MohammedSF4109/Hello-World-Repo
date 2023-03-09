@@ -15,7 +15,7 @@ steps:
     inputs:
       targetType: inline
       script: |
-        $XMLfile = "$(Build.SourcesDirectory)\*.xml"
+        $XMLfile = "$(Build.SourcesDirectory)\WPF_Utilities.xml"
         $XMLNodes = [xml](Get-Content $XMLfile)
         foreach( $Utility in $XMLNodes.Build.Utilities.Utility )
         {
