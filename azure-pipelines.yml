@@ -46,7 +46,7 @@ steps:
       targetType: inline
       script: |
         $XMLFilePath = "ReplaceAssignment.xml"
-        $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath).Replace( "\_\[0\-9\]\{4\}", "_2010" )
+        $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace( "_[0-9]{4}", "_2010" )
         Write-Host $XMLContent
         [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
 
