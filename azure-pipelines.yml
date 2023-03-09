@@ -47,6 +47,7 @@ steps:
       script: |
         $XMLFilePath = "$(Build.SourcesDirectory)\ReplaceAssignment.xml"
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath).Replace( "_[0-9]{4}", "_2023" )
+        Write-Host $XMLContent
         [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
 
   - task: 'DotNetCoreCLI@2'
