@@ -18,7 +18,7 @@ steps:
         $XMLfile = "$(Build.SourcesDirectory)\*.xml"
         $XMLNodes = [xml](Get-Content $XMLfile)
         $number = 0
-        foreach( $Utility in $XMLNodes.Build.Utilities.Utility )
+        foreach( $Utility in $XMLNodes.Build.Utilities )
         {
           $Utility
         }
