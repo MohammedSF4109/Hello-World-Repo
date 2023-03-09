@@ -2,7 +2,7 @@
   <Utilities>
 	
     <Utility Framework="4.0" Name="IO Utilities" SourceType="SVN">
-      <Solutionfile>%PATH%\Build\Utilities\Formula Validator\Formula_Validator_2023.sln</Solutionfile>
+      <Solutionfile>%PATH%\Build\Utilities\Formula Validator\Formula_Validator_2010.sln</Solutionfile>
       <Output>%PATH%\Build\Utilities\Formula Validator\bin\Release</Output>
       <ReferencePath></ReferencePath>
 	  <Folders>

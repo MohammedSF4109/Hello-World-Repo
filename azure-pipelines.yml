@@ -45,8 +45,8 @@ steps:
     inputs:
       targetType: inline
       script: |
-        $XMLFilePath = "D:\Git\Hollo-World-Repo\WPF_Utilities.xml"
-        $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace( '_[0-9]{4}', "_2010" )
+        $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
+        $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace( '_[0-9]{4}', "_2023" )
         [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
 
   - task: 'DotNetCoreCLI@2'
