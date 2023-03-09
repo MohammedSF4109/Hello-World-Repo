@@ -17,7 +17,7 @@ steps:
       script: |
         $XMLfile = "$(Build.SourcesDirectory)\*.xml"
         $XMLData = [xml](Get-Content $XMLfile)
-        $XMLData.Build.Utilities.Utility
+        $XMLData.Build.Utilities.Utility[1].Solutionfile
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
