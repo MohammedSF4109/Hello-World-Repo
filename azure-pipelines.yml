@@ -16,8 +16,13 @@ steps:
       targetType: inline
       script: |
         $XMLfile = "$(Build.SourcesDirectory)\*.xml"
-        $XMLData = [xml](Get-Content $XMLfile)
-        $XMLData.Build.Utilities.Utility.SourceType
+        $XMLNodes = [xml](Get-Content $XMLfile)
+        $number = 0
+        foreach($XMLNode in $XMLNodes.Build.Utilities)
+        {
+          $SourceType = $XMLData.Build.Utilities.Utility.SourceType
+          if($SourceType -eq SVN) {Write-Host $number+1}
+        }
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
