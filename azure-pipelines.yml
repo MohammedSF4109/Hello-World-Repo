@@ -45,7 +45,7 @@ steps:
     inputs:
       targetType: inline
       script: |
-        $XMLFilePath = $( Build.SourcesDirectory )\ReplaceAssignment.xml
+        $XMLFilePath = "$( Build.SourcesDirectory )\ReplaceAssignment.xml"
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath).Replace( "_[0-9]{4}", "_2023" )
         [System.IO.File]::WriteAllText( $XMLFilePath )
 
