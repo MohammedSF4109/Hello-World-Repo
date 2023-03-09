@@ -21,7 +21,7 @@ steps:
         foreach($XMLNode in $XMLNodes.Build.Utilities)
         {
           $SourceType = $XMLData.Build.Utilities.Utility.SourceType
-          if($SourceType -eq SVN) {Write-Host $number+1}
+          if($SourceType -eq 'SVN') {Write-Host $number+1}
         }
 
   - task: 'DotNetCoreCLI@2'
