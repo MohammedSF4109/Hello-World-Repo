@@ -11,7 +11,7 @@ variables:
 
 steps:  
   - task: PowerShell@2
-    displayName: parsing XML document
+    displayName: Iterating and storing XML attributes 
     inputs:
       targetType: inline
       script: |
@@ -32,7 +32,13 @@ steps:
             $GitFolder = $Utility.Folders.Folder
           }
         }
-        Write-Host $SVNSolutionfile
+        Write-Host "SVNSolutionfile: " $SVNSolutionfile
+        Write-Host "SVN Output: " $SVNOutput
+        Write-Host "SVNFolder: " $SVNFolder
+        Write-Host "`n"
+        Write-Host "GitSolutionfile: " $GitSolutionfile
+        Write-Host "Git Output: " $GitOutput
+        Write-Host "Git Folder: " $GitFolder
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
