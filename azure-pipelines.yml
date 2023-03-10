@@ -47,9 +47,13 @@ steps:
       script: |
         $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace( '(?<=_)\d{4}(?<!.sln)', "2023" )
-        $XMLContent-Replace( '\W[P][A-T]\W' , "D:/Work/SVN" )
-        $XMLContent-Replace('[a-z]{2}-[A-Z]{2}', "INR" )
         [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
+
+  - task: PowerShell@2
+    displayName: Replace an attribute of XML
+    inputs:
+      script: |
+        Write-Host $XMLContent
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
