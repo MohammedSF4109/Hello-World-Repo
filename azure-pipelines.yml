@@ -65,6 +65,7 @@ steps:
       script: |
         $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace('[e][a-z]-[A-Z]{2}', "INR")
+        [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
