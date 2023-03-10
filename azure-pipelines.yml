@@ -54,7 +54,9 @@ steps:
     inputs:
       targetType: inline
       script: |
-        Write-Host $XMLContent
+        $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
+        $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace('\W[P][A-T]{3}\W', "D:\Work\SVN")
+        [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
 
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
