@@ -1,2 +1,2 @@
 # Hollo-World-Repo
-This repository contains basic HelloWorldProject
+This repository contains xml and YAML files

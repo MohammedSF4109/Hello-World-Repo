@@ -49,7 +49,7 @@
     <Utility Framework="4.0" Name="Olap Utils" SourceType="SVN">
       <Solutionfile>D:\Work\SVN\WPF\ReportBuilder.WPF\Src\Syncfusion.ReportBuilder.WPF_2023.sln</Solutionfile>
       <Output>D:\Work\SVN\WPF\ReportBuilder.WPF\Src\bin_2023\Release</Output>
-      <ReferencePath>D:\Work\SVN\Assemblies\4.0\en-US</ReferencePath>
+      <ReferencePath>D:\Work\SVN\Assemblies\4.0\INR</ReferencePath>
 	  <Folders>
 	  <Folder>D:\Work\SVN\WPF\ReportBuilder.WPF\Src</Folder>
 	  </Folders>
@@ -213,7 +213,7 @@
 	<Utility Framework="4.0" Name="VSIX Extension" SourceType="GitHub">
       <Solutionfile>%GitHubPath%\build-utilities\SyncfusionVSIXInstaller\SyncfusionVSIXInstallerConsole\SyncfusionVSIXInstallerConsole.sln</Solutionfile>
       <Output>%GitHubPath%\CustomUtilities\SyncfusionVSIXInstaller\SyncfusionVSIXInstallerConsole\bin\Release</Output>
-      <ReferencePath>D:\Work\SVN\Assemblies\4.0\en-US</ReferencePath>
+      <ReferencePath>D:\Work\SVN\Assemblies\4.0\INR</ReferencePath>
 	  <Folders>
 	  <Folder>%GitHubPath%\build-utilities\SyncfusionVSIXInstaller</Folder>
 	  </Folders>

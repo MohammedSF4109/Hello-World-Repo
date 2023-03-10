@@ -5,9 +5,6 @@ trigger:
 
 pool:
   name: Default
-  
-variables: 
- buildConfiguration: 'Release'
 
 steps:  
   - task: PowerShell@2
@@ -65,22 +62,3 @@ steps:
       script: |
         $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace('[e][a-z]-[A-Z]{2}', "INR")
-
-  - task: 'DotNetCoreCLI@2'
-    displayName: build $(buildConfiguration)
-    inputs:
-      command: build
-      projects: '**/*.csproj'
-      arguments: '--configuration $(buildConfiguration)'
-  
-  - task: 'DotNetCoreCLI@2'
-    displayName: dotnet publish --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
-    inputs:
-      command: publish
-      publishWebProjects: false
-      projects: '**/*.csproj'
-      arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-      zipAfterPublish: true
-
-  - task: 'PublishBuildArtifacts@1'
-    displayName: publish artifact
