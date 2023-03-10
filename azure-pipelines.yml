@@ -6,8 +6,6 @@ trigger:
 pool:
   name: Default
 
-variables: 
-  name: VasanthPractice
 steps:  
   - task: PowerShell@2
     displayName: Iterating and storing XML attributes 
@@ -65,9 +63,3 @@ steps:
         $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace('[e][a-z]-[A-Z]{2}', "INR")
         [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
-  
-  - task: PowerShell@2
-    inputs:
-      targetType: inline
-      script: |
-        Write-Host $name
