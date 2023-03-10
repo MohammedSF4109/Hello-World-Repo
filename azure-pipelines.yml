@@ -52,6 +52,7 @@ steps:
   - task: PowerShell@2
     displayName: Replace an attribute of XML
     inputs:
+      targetType: inline
       script: |
         Write-Host $XMLContent
 
