@@ -58,6 +58,14 @@ steps:
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace('\W[P][A-T]{3}\W', "D:\Work\SVN")
         [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
 
+  - task: PowerShell@2
+    displayName: Replace an attribute of an XML 
+    inputs:
+      targetType: inline
+      script: |
+        $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
+        $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace('[e][a-z]-[A-Z]{2}', "INR")
+
   - task: 'DotNetCoreCLI@2'
     displayName: build $(buildConfiguration)
     inputs:
