@@ -7,7 +7,7 @@ pool:
   name: Default
 
 variables: 
-  XMLFilePath: "D:\\Git\\Hollo-World-Repo\\ReplaceAssignment.XML"
+  name: VasanthPractice
 steps:  
   - task: PowerShell@2
     displayName: Iterating and storing XML attributes 
@@ -70,4 +70,4 @@ steps:
     inputs:
       targetType: inline
       script: |
-        Write-Host $XMLFilePath
+        Write-Host $name
