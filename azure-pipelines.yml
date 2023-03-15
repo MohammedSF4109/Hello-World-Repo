@@ -63,3 +63,20 @@ steps:
         $XMLFilePath = "D:\Git\Hollo-World-Repo\ReplaceAssignment.XML"
         $XMLContent = [System.IO.File]::ReadAllText($XMLFilePath)-Replace('[e][a-z]-[A-Z]{2}', "INR")
         [System.IO.File]::WriteAllText($XMLFilePath, $XMLContent)
+  
+  - task: PowerShell@2
+    displayName: INI file operation
+    inputs:
+      targetType: inline
+      script: |
+        $INIdata = Get-Content "D:\Git\Hollo-World-Repo\FBVariables.ini"
+        $INIVariable = $INIdata[1]-split("=")
+        $INIVersion= $INIVariable[1]-split("\.")
+        $firstValue = $INIVersion[0]
+        $secondValue = $INIVersion[1]
+        $thirdValue = $INIVersion[2]
+        $forthValue = $INIVersion[3]
+        Write-Host $firstValue
+        Write-Host $secondValue
+        Write-Host $thirdValue
+        Write-Host $forthValue
