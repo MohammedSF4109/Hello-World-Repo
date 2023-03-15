@@ -76,7 +76,7 @@ steps:
         $secondValue = $INIVersion[1]
         $thirdValue = $INIVersion[2]
         $forthValue = $INIVersion[3]
-        Write-Host $firstValue
-        Write-Host $secondValue
-        Write-Host $thirdValue
-        Write-Host $forthValue
+        Write-Host "firstValue: "$firstValue
+        Write-Host "secondValue: $secondValue
+        Write-Host "thirdValue: "$thirdValue
+        Write-Host "forthValue: "$forthValue
